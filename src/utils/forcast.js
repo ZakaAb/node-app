@@ -16,7 +16,7 @@ const forcast = (lat, lon, callback) => {
             callback('Unable to find location', undefined)
         } else {
             const { current } = body
-            callback(undefined, `${current.weather_descriptions[0]}. It is currenty ${current.temperature} degress out. It feels like ${current.feelslike} degress out. `)
+            callback(undefined, `${current.weather_descriptions[0]}. It is currenty ${current.temperature} degress out. It feels like ${current.feelslike} degress out. The humidity is ${current.humidity}% period. `)
         }
        
     })
